@@ -1,0 +1,165 @@
+@CHARSET "UTF-8";
+
+@import "mysite.css";
+
+#board {
+	cellspacing: 0;
+}
+
+#board {
+	margin: 20px auto;
+	width: 540px;
+}
+
+#board form, #board table {
+	width: 94%;
+	margin: 20px;
+	text-align: center;
+}
+
+#board table th:nth-child(2) {
+	width: 300px;
+}
+
+#board table td {
+	padding: 4px;
+	border-bottom: 1px dotted #999999;
+}
+
+#board table th {
+	padding: 3px;
+	background-color: #E0E0E0;
+	font-size: 13px;
+}
+
+#board table tr:hover  {
+	background-color: #EfEfEf;
+}
+
+#board ul {
+	width: 100%;
+	margin-top: 20px
+}
+
+#board ul li {
+	width: 100%;
+	margin-top: 10px
+}
+
+#board.delete-form {
+	height: 200px
+}
+
+#board.delete-form form {
+	width: 300px;
+	padding: 10px;
+	border: 1px solid #666;
+	border-radius: 10px;
+	margin: 50px auto;
+}
+
+#board.delete-form a {
+	display: block;
+	margin: 20px auto;
+	width: 110px
+}
+
+#board.delete-message p {
+	padding: 100px;
+	height: 50px;
+	text-align: center
+}
+
+#board textarea#content {
+	width: 100%;
+	border: none;
+	height: 100px;
+	resize: none;
+	outline: none;
+}
+
+input[type="submit"], input[type="reset"] {
+	border-radius: 5px;
+	padding: 3px;
+	margin: 10px;
+	float: right;
+	font-family: "맑은 고딕";
+	letter-spacing: -1px;
+	background-color: #00a200;
+	border-style: solid;
+	color: white;
+	margin: 10px;
+	padding: 3px;
+}
+
+img {
+	width: 24px;
+	margin-left: 350px;
+}
+
+#searchfield {
+	position: absolute;
+	margin-left: 170px;
+	margin-top: 3px;
+}
+
+input[type="reset"] {
+	background-color: #ff3333;
+}
+
+input[type="button"] {
+	border-radius: 5px;
+	margin-left: 5px;
+	padding: 3px;
+	font-family: "맑은 고딕";
+	letter-spacing: -1px;
+	background-color: #ff6666;
+	border-style: solid;
+	color: white;
+	padding: 3px;
+}
+
+#title {
+	width: 300px;
+}
+
+#insert-form {
+	margin: 20px;
+}
+
+#member_name {
+	width: 80px;
+}
+
+#boardviewtitle {
+	width: 300px;
+	font-family: "맑은 고딕";
+	letter-spacing: -1px;
+}
+
+#boardviewcontent {
+	width: 400px;
+	font-family: "맑은 고딕";
+	letter-spacing: -1px;
+}
+
+a {
+	text-decoration: none;
+	color: #4f4f4f;
+}
+
+a:hover {
+	color: #00a200;
+}
+
+.boardview td:nth-child(odd) {
+	background-color: #E0E0E0;
+}
+
+.boardview td:nth-child(4) {
+	width: 100px;
+}
+
+.boardview tr:nth-child(3) {
+	height: 200px;
+}

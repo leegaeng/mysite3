@@ -1,0 +1,86 @@
+@CHARSET "UTF-8";
+
+@import "mysite.css";
+
+#user {
+	margin: 20px auto;
+	width: 540px;
+}
+
+#join-form {
+	width: 240px;
+	padding: 10px;
+	border: 1px solid #666;
+	border-radius: 10px;
+	margin: 50px auto;
+}
+
+label.block-label {
+	display: block
+}
+
+label.block-label, fieldset {
+	margin: 5px 0 3px 0
+}
+
+label.block-label, fieldset legend {
+	margin-bottom: 3px
+}
+
+fieldset {
+	border: none
+}
+
+input[type="submit"] {
+	border-radius: 5px;
+	font-family: "맑은 고딕";
+	letter-spacing: -1px;
+	background-color: #00a200;
+	border-style: solid;
+	color: white;
+	padding: 3px;
+	display: block;
+	width: 80px;
+	margin: 20px auto;
+	background-color: #00a200
+}
+
+input[type="text"] {
+	width:150px;
+}
+
+input[type="password"] {
+	width:120px;
+}
+
+
+input[type="button"] {
+	width: 80px;
+	margin: 1px;
+	border-radius: 5px;
+	font-family: "맑은 고딕";
+	letter-spacing: -1px;
+	background-color: #ff3333;
+	border-style: solid;
+	color: white;
+	padding: 3px;
+	display: block;
+	width: 80px;
+}
+
+#login-form {
+	width: 160px;
+	padding: 10px;
+	border: 1px solid #666;
+	border-radius: 10px;
+	margin: 50px auto;
+}
+
+#user p {
+	text-align: center;
+	padding: 10px
+}
+
+#user p.jr-success {
+	height: 200px
+}

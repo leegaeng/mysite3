@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="board">
+	<typeAlias alias="BoardVo" type="com.sds.icto.mysite.domain.BoardVo" />
+
+	<resultMap class="BoardVo" id="boardResultMap">
+		<result column="no" property="no" />
+		<result column="title" property="title" />
+		<result column="content" property="content" />
+		<result column="member_no" property="member_no" />
+		<result column="member_name" property="member_name" />
+		<result column="view_cnt" property="view_cnt" />
+		<result column="reg_date" property="reg_date" />
+	</resultMap>
+
+	<insert id="insert" parameterClass="BoardVo">
+		<![CDATA[
+		insert into board values(board_no_seq.nextval, #title#, #content#, #member_no#, #member_name#, 0, sysdate)
+		]]>
+	</insert>
+
+	<delete id="delete" parameterClass="java.lang.Long">
+	<![CDATA[
+		delete from board where no=#value#]]>
+	</delete>
+
+	<update id="updatecnt" parameterClass="BoardVo">
+	<![CDATA[
+		update board set view_cnt = view_cnt +1 where no=#no#
+	]]>
+	</update>
+
+	<update id="update" parameterClass="BoardVo">
+		update board set
+		title=#title#, content=#content#, reg_date=sysdate where no=#no#
+	</update>
+
+	<select id="list" resultMap="boardResultMap">
+	<![CDATA[
+		select * from board	]]>
+	</select>
+
+	<select id="get" parameterClass="java.lang.Long" resultMap="boardResultMap">
+	<![CDATA[
+		select * from board where no=#value#]]>
+	</select>
+
+	<select id="search" parameterClass="java.lang.String" resultMap="boardResultMap">
+	<![CDATA[
+		select * from board where title like '%$value$%' or member_name like '%$value$%'
+		]]>
+	</select>
+
+
+
+</sqlMap> 
